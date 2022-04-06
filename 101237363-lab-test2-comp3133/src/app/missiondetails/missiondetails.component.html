@@ -1,0 +1,22 @@
+<div class="heading">
+  <h1>SpaceX Mission Details</h1>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    {{details?.mission_name}}
+    {{details?.launch_year}}
+  </div>
+  <div>
+    <h2>Rocket Name</h2>
+    <p>Name : <b>{{details?.rocket?.rocket_name}}</b></p>
+    <p>Type : <b>{{details?.rocket?.rocket_type}}</b></p>
+  </div>
+  <div>
+    <h2>Launch Site</h2>
+    <p>Name: <b>{{details?.launch_site?.site_name}}</b></p>
+  </div>
+  <div>
+    <h2>Launch Details</h2>
+    <p>{{details?.details}}</p>
+  </div>
+</div>

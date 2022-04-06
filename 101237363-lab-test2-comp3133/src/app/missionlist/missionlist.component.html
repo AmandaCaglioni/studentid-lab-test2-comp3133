@@ -1,0 +1,18 @@
+<ng-container *ngIf="!showMissionDetailScreen">
+  <div class="heading">
+    <h1>SpaceX Mission Launch List</h1>
+  </div>
+  <div class="space-list" *ngFor="let item of spacexApiResponseArray">
+    <div class="content-div" (click)="missionDetail(item)">
+      <h3>{{item.mission_name}}</h3>
+      <p>{{item.launch_year}}</p>
+      <p>{{item.details}}</p>
+      <img src="{{item.links.mission_patch}}" alt="">
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="showMissionDetailScreen">
+  <app-missiondetails [details]="currentSelectedObject"></app-missiondetails>
+  <button class="btn btn-primary" (click)="showMissionDetailScreen = !showMissionDetailScreen">Back To List</button>
+</ng-container>

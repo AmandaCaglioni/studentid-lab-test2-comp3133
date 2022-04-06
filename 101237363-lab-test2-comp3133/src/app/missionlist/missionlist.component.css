@@ -1,0 +1,15 @@
+.space-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.space-list>div{
+    background-color: aqua;
+    margin-top: 2%;
+}
+.content-div{
+ padding-left: 2%;
+}
+.content-div:hover{
+    cursor: pointer;
+}
